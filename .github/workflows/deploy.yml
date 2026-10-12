@@ -43,6 +43,7 @@ jobs:
             IMAGE_TAG="$GITHUB_SHA"
           fi
 
+          REPOSITORY="$(echo -n "$REPOSITORY" | tr -d '[:space:]')"
           docker build -t "$REGISTRY/$REPOSITORY:$IMAGE_TAG" .
           docker push "$REGISTRY/$REPOSITORY:$IMAGE_TAG"
   # deploy-staging:
