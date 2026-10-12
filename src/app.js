@@ -10,6 +10,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/api", (req, res) => {
+  return res.status(200).json({
+    message: "API routes",
+  });
+});
+
 app.get("/health", (req, res) => {
   res.status(200).json({ status: "ok" });
 });
