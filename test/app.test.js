@@ -18,7 +18,7 @@ test("GET / returns greeting", async () => {
   const res = await fetch(baseUrl);
   assert.strictEqual(res.status, 200);
   assert.deepStrictEqual(await res.json(), {
-    message: "Hello from Node.js on AWS ECS!",
+    message: "Hello from Node.js on AWS ECS!. Just wait for ECS configuration.",
   });
 });
 
